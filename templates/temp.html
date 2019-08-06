@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <title>Temperature Forecast</title>
+        <link href="https://fonts.googleapis.com/css?family=Butterfly+Kids|Darker+Grotesque|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+             body {
+                background: #aec6cf;
+                color: #ffffff;
+            }
+
+            * {
+                text-align: center;
+                font-family: 'Darker Grotesque', sans-serif;
+            }
+
+            header {
+                padding-top: 40px;
+                padding-bottom: 15px;
+            }
+
+            #headertitle {
+                font-size: 40px;
+                padding: 20px 10px;
+            }
+
+            #headerdesc {
+                font-size: 15px;
+                display:block;
+                margin:0;
+            }
+
+            hr {
+                color: #779ecb;
+                width: 90%;
+                display: block;
+                margin-bottom: 0em;
+                border-width: 1px;
+            }
+
+            #location_name {   
+                font-size: 50px;
+                
+            }
+
+            #location_image {
+                display:inline-block;
+            }
+
+            .general-desc {
+                font-size: 20px;
+            }
+
+            .other-desc {
+                margin-top: 25px;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-columns: auto 200px;
+                grid-template-rows: auto auto;
+                justify-content: center;
+            }
+
+            .grid-item {
+                border: 1px solid;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <span id = "headertitle">WeatherApp</span>
+            <span id = "headerdesc">Real-time temperatures at your convenience</span>
+        </header>
+        <hr noshade></hr>
+        <span id = "location_name">{{ location }}</span> 
+        <img id = "location_image" src = "{{ temperature_image }}"/>
+        <span>{{ mid_temp }} °F</span>
+        <div class = "general-desc"><i>{{ desc }}</i></div>
+        <div class = "grid-container other-desc">
+            <div class = "grid-item general-desc">Low: </div>
+            <div class = "grid-item general-desc">{{ low_temp }} °F</div>
+            <div class = "grid-item general-desc">High: </div>
+            <div class = "grid-item general-desc">{{ high_temp }} °F</div>
+            <div class = "grid-item general-desc">Wind Speed: </div>
+            <div class = "grid-item general-desc">{{ windSpeed }} mph</div>
+            <div class = "grid-item general-desc">Humidity: </div>
+            <div class = "grid-item general-desc">{{ humidity }} %</div>
+            <div class = "grid-item general-desc">Coordinates: </div>
+            <div class = "grid-item general-desc">{{ coordinates }}</div>
+        </div>
+        <div>{{ data }}</div>
+    </body>
+</html>

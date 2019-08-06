@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <title>Request Example</title>
+    <link href="https://fonts.googleapis.com/css?family=Butterfly+Kids|Darker+Grotesque|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body {
+        background: #aec6cf;
+        color: #ffffff;
+    }
+
+    * {
+        text-align:center;
+        font-family: 'Darker Grotesque', sans-serif;
+    }
+
+    header {
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    #headertitle {
+        font-size: 70px;
+        padding: 20px 10px;
+    }
+
+    #headerdesc {
+        font-size: 15px;
+        display:block;
+        margin:0;
+    }
+
+    hr {
+        color: #779ecb;
+        width: 90%;
+        display: block;
+        margin-bottom: 2em;
+        border-width: 1px;
+    }
+
+    #formdesc, #form {
+        font-size: 20px;
+    }
+
+    #form {
+        top: 100px;
+        padding-top: 5px;
+    }
+
+    input, textarea {
+        border-radius: 5px;
+    }
+    </style>
+</head>
+
+<body>
+    <header>
+        <span id = "headertitle">WorldWeather</span>
+        <span id = "headerdesc">Real-time forecasts at your convenience</span>
+    </header>
+    
+    <hr noshade></hr>
+    <div id = "formdesc">
+        Enter a country, city, or zip code to find out more information about the weather of the location.
+    </div>
+    <div id = "form">
+    <form method="POST" action="/temp">
+        <input type="text" name="zip">
+        <input type="submit">
+    </form>
+    </div>
+</body>
+
+</html>
