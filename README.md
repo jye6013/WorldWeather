@@ -1,2 +1,2 @@
 # WorldWeather
-A web app that utilizes current weather data from OpenWeather API.
+A web app that collects current weather data from OpenWeather API utilizing `Flask`.
